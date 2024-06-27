@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 import json
 
 def getBaselinkerOrders():
-  a = datetime.now() - timedelta(1)
+  a = datetime.now() - timedelta(minutes=10)
   a = datetime.timestamp(a)
   baselinkerUrl = "https://api.baselinker.com/connector.php"
   baselinkerOrderRequest = {
