@@ -1,9 +1,7 @@
-import functions_framework
 import Utils
 import requests
 from datetime import datetime
 
-@functions_framework.http
 def noweZamowienie(request):
   data = Utils.getBaselinkerOrders()
   for order in data['orders']:
@@ -51,3 +49,4 @@ def noweZamowienie(request):
                 }]
         }
     requests.post("https://api.airtable.com/v0/appcseESnT4Odf0Wd/tblNW8qUXQbC6DmTs", json=airtablerequest, headers=airtableheader)
+noweZamowienie("a")
